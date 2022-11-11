@@ -1,0 +1,33 @@
+INP R0,2
+  1         STR R0,N
+  2         MOV R2, #200
+  3         MOV R3,#250
+  4         JMS PR1
+  5         JMS PR2
+  6         JMS F
+  7         HLT
+  8 N       DAT
+  9 PR1     INP R1,3
+ 10         STR R1,[R2]
+ 11         JMS PR2
+ 12         RET
+ 13 PR2     PSH R1
+ 14         MOV R4,R1
+ 15         MOD R4,#2
+ 16         CMP R4,#1
+ 17         BEQ F
+ 18         ADD R2,#1
+ 19         SUB R0,#1
+ 20         CMP R0,#1
+ 21         BGE PR1
+ 22         RET
+ 23 F       POP R1
+ 24         MUL R1,R1
+ 25         STR R1,[R3]
+ 26         ADD R3,#1
+ 27         OUT R1
+ 28         ADD R2,#1
+ 29         SUB R0,#1
+ 30         CMP R0,#1
+ 31         BGE PR1
+ 32         RET
