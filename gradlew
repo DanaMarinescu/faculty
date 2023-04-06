@@ -80,18 +80,18 @@ case "`uname`" in
     ;;
 esac
 
-CLASSPATH=$C:\Users\danam\OneDrive\Desktop\SCOALA\GDSC\project-test\faculty/gradle/wrapper/gradle-wrapper.jar
+CLASSPATH=C:\Users\danam\OneDrive\Desktop\SCOALA\GDSC\project-test\faculty\gradle\wrapper\gradle-wrapper.jar
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$C:\Program Files\Java\jdk-19" ] ; then
-    if [ -x "$C:\Program Files\Java\jdk-19/jre/sh/java" ] ; then
+    if [ -x "$C:\Program Files\Java\jdk-19\jre\sh\java" ] ; then
         # IBM's JDK on AIX uses strange locations for the executables
-        JAVACMD="$C:\Program Files\Java\jdk-19/jre/sh/java"
+        JAVACMD="$C:\Program Files\Java\jdk-19\jre\sh\java"
     else
-        JAVACMD="$C:\Program Files\Java\jdk-19/bin/java"
+        JAVACMD="$C:\Program Files\Java\jdk-19\bin\java"
     fi
     if [ ! -x "$JAVACMD" ] ; then
-        die "ERROR: JAVA_HOME is set to an invalid directory: $JAVA_HOME
+        die "ERROR: JAVA_HOME is set to an invalid directory: $C:\Program Files\Java\jdk-19
 
 Please set the JAVA_HOME variable in your environment to match the
 location of your Java installation."
@@ -127,7 +127,7 @@ fi
 
 # For Cygwin or MSYS, switch paths to Windows format before running java
 if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
-    APP_HOME=`cygpath --path --mixed "$APP_HOME"`
+    APP_HOME=`cygpath --path --mixed "$C:\Users\danam\OneDrive\Desktop\SCOALA\GDSC\project-test\faculty"`
     CLASSPATH=`cygpath --path --mixed "$CLASSPATH"`
     JAVACMD=`cygpath --unix "$JAVACMD"`
 
